@@ -1,0 +1,7 @@
+{
+  "name": "make a heart project result image function",
+  "version": "0.0.1",
+  "dependencies" :{
+      "imagemagick": ">=0.1.3"
+  }
+}
