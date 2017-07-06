@@ -1,4 +1,3 @@
-exports.helloWorld = function helloWorld (event, callback) {
-  console.log(`My Cloud Function: ${event.data.message}`);
-  callback();
+exports.helloWorld = (req, res) => {
+    res.send('helloWorld!');
 };
