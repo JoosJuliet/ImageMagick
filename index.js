@@ -6,7 +6,7 @@ exports.helloWorld = (req, res) => {
         if (err) {
             console.log(err);
         };
-        res.send('Shot at '+features);
+        res.send(features);
     });
 
 };
