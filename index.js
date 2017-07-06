@@ -2,11 +2,11 @@ const im = require('imagemagick');
 
 // 시간기준은 잘 안된다
 exports.helloWorld = (req, res) => {
-    im.readMetadata('./dog.png', function(err, metadata){
+    im.identify('./dog.png', function(err, features){
         if (err) {
             console.log(err);
         };
-        res.send('Shot at '+metadata);
+        res.send('Shot at '+features);
     });
 
 };
