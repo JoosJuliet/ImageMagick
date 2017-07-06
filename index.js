@@ -3,8 +3,10 @@ const im = require('imagemagick');
 // 시간기준은 잘 안된다
 exports.helloWorld = (req, res) => {
     im.readMetadata('./dog.png', function(err, metadata){
-        if (err) throw err;
-        res.send('Shot at '+metadata.exif.dateTimeOriginal);
+        if (err) {
+            console.log(err);
+        };
+        res.send('Shot at '+metadata);
     });
 
 };
