@@ -17,20 +17,14 @@ exports.helloWorld = (req, res) => {
 
     draw();
 
-    // res.writeHead(200, {
-    //     'Content-Type': 'image/png'
+
+
+    // im.identify('./dog.png', function(err, features){
+    //     if (err) {
+    //         console.log(err);
+    //     };
+    //     // res.send(tefeatures);
     // });
-    // res.end(data);
-
-
-
-
-    im.identify('./dog.png', function(err, features){
-        if (err) {
-            console.log(err);
-        };
-        res.send(tefeatures);
-    });
 
 };
 
