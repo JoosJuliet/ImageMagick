@@ -1,8 +1,8 @@
 const im = require('imagemagick');
-const p5 = require('./p5.min.js');
+
 // 시간기준은 잘 안된다
 exports.helloWorld = (req, res) => {
-
+    require('./p5.min.js');
     let draw = () => {
         try{
             p5.ellipse(50, 50, 80, 80);
@@ -15,7 +15,7 @@ exports.helloWorld = (req, res) => {
 
     }
 
-    p5.draw();
+    draw();
 
     // res.writeHead(200, {
     //     'Content-Type': 'image/png'
