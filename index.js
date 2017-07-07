@@ -5,15 +5,15 @@ exports.helloWorld = (req, res) => {
     require('./p5.min.js');
     let draw = () => {
         try{
-            p5.ellipse(50, 50, 80, 80);
+            ellipse(50, 50, 80, 80);
         } catch( e ) {
-            res.status(400).send("e");
+            res.status(400).send("e",e);
         } finally {
             console.log("1");
         }
         console.log("2");
 
-    }
+    };
 
     draw();
 
