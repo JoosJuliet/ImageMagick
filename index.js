@@ -1,12 +1,34 @@
 const im = require('imagemagick');
-
+const p5 = require('./p5.min.js');
 // 시간기준은 잘 안된다
 exports.helloWorld = (req, res) => {
+
+
+    p5.draw() {
+        try{
+            p5.ellipse(50, 50, 80, 80);
+        } catch( e ) {
+            res.status(400).send("e");
+        } finally {
+            console.log("1");
+        }
+        console.log("2");
+
+    }
+
+    // res.writeHead(200, {
+    //     'Content-Type': 'image/png'
+    // });
+    // res.end(data);
+
+
+
+
     im.identify('./dog.png', function(err, features){
         if (err) {
             console.log(err);
         };
-        res.send(features);
+        res.send(tefeatures);
     });
 
 };
