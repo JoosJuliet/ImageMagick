@@ -3,8 +3,7 @@ const p5 = require('./p5.min.js');
 // 시간기준은 잘 안된다
 exports.helloWorld = (req, res) => {
 
-
-    p5.draw() {
+    let draw = () => {
         try{
             p5.ellipse(50, 50, 80, 80);
         } catch( e ) {
@@ -15,6 +14,8 @@ exports.helloWorld = (req, res) => {
         console.log("2");
 
     }
+
+    p5.draw();
 
     // res.writeHead(200, {
     //     'Content-Type': 'image/png'
